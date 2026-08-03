@@ -41,7 +41,7 @@ Structural crash simulation governs vehicle safety, but until now the field has 
 
 ## Solver Validation — OpenRadioss vs. Ansys LS-DYNA
 
-To establish dataset credibility we validate the open-source OpenRadioss workflow against the commercial industry-standard solver **Ansys LS-DYNA** on the detailed Toyota Yaris model, and against independent **physical crash-test references**.
+To establish dataset credibility we validate the open-source OpenRadioss workflow against the commercial industry-standard solver **Ansys LS-DYNA** on matched Toyota Yaris, Dodge Neon, and Chevrolet Silverado models, and against independent **physical crash-test references**.
 
 <p align="center">
   <img src="assets/gifs/openradioss_vs_lsdyna_synced_direct.gif" width="85%" alt="OpenRadioss vs LS-DYNA crash comparison"/>
@@ -51,7 +51,24 @@ To establish dataset credibility we validate the open-source OpenRadioss workflo
   <em>Side-by-side, time-synchronised crash response of the same Toyota Yaris model simulated in OpenRadioss (open-source) and Ansys LS-DYNA (commercial).</em>
 </p>
 
-Quantitative agreement against the LS-DYNA reference:
+### Additional full-vehicle comparisons
+
+<table align="center">
+  <tr>
+    <th align="center">Dodge Neon</th>
+    <th align="center">Chevrolet Silverado</th>
+  </tr>
+  <tr>
+    <td><img src="assets/gifs/solver_validation/neon_openradioss_vs_lsdyna.gif" width="100%" alt="Dodge Neon OpenRadioss versus LS-DYNA crash comparison"/></td>
+    <td><img src="assets/gifs/solver_validation/silverado_openradioss_vs_lsdyna.gif" width="100%" alt="Chevrolet Silverado OpenRadioss versus LS-DYNA crash comparison"/></td>
+  </tr>
+</table>
+
+<p align="center">
+  <em>Front-isometric deformation histories for the matched NCAC v7 Neon deck at 56.16 km/h and CCSA V3e Silverado baseline at 35 mph. Frames are synchronized by normalized crash progress; rigid walls are hidden for structural clarity.</em>
+</p>
+
+Quantitative agreement for the Yaris LS-DYNA reference:
 
 | Quantity | OpenRadioss vs. LS-DYNA |
 |---|---:|
@@ -59,7 +76,7 @@ Quantitative agreement against the LS-DYNA reference:
 | Wall-force duration | **2.6 %** |
 | Peak internal energy | **0.5 %** |
 
-Relative to the published physical crash test, OpenRadioss matches the impact speed within **0.2 %**, overpredicts peak wall force by **~14.6 %**, and underpredicts wall-force duration by **~19.6 %** — comparisons that support global-response agreement while transparently identifying contact- and pulse-shape quantities as solver-sensitive.
+Relative to the published Yaris physical crash test, OpenRadioss matches the impact speed within **0.2 %**, overpredicts peak wall force by **~14.6 %**, and underpredicts wall-force duration by **~19.6 %** — comparisons that support global-response agreement while transparently identifying contact- and pulse-shape quantities as solver-sensitive.
 
 ---
 
